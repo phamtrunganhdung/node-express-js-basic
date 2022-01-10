@@ -1,20 +1,9 @@
-import connection from "../configs/connectDB";
+import pool from "../configs/connectDB";
 
-let getHomePage = (req, res) => {
-  let data = [];
-  connection.query("SELECT * FROM `users` ", function (err, results, fields) {
-    results.map((row) => {
-      data.push({
-        id: row.id,
-        firstName: row.firstName,
-        lastName: row.lastName,
-        email: row.email,
-        address: row.address,
-      });
-    });
+let getHomePage = async (req, res) => {
+  const [rows, fields] = await pool.execute("SELECT * FROM users");
 
-    return res.render("index.ejs", { dataUser: data });
-  });
+  return res.render("index.ejs", { dataUser: rows });
 };
 
 module.exports = {
