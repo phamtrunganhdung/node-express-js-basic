@@ -67,8 +67,12 @@
                             </td>
                             <td>
                                 <a href="/detail/user/<%= dataUser[i].id %>">Detail</a>
-                                <button type="button">Edit</button>
-                                <button type="button">Delete</button>
+                                <form action="/update-user/<%= dataUser[i].id %>" method="GET">
+                                <button type="submit">Edit</button>
+                                </form>
+                                <form action="/delete-an-user/<%= dataUser[i].id %>" method="POST">
+                                <button type="submit">Delete</button>
+                                </form>
                             </td>
                         </tr>
                         <% }%>
