@@ -54,3 +54,7 @@ body {
   margin-top: 15px;
   cursor: pointer;
 }
+
+form {
+  display: inline-block;
+}
