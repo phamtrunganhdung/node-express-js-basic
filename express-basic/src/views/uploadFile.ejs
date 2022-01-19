@@ -16,19 +16,19 @@
     </div>
 
     <div class="upload-file-container">
-        <form method="POST" action="/upload-profile-pic" enctype="multipart/form-data">
+        <form method="POST" action="/upload-profile-pic" enctype="multipart/form-data" class="upload-file">
             <div>
-               <b> <label>Avatar:</label></b>
+               <b> <label>Upload single image</label></b>
                 <input type="file" name="profile_pic" />
             </div>
             <div>
-                <button class="btn-save" type="submit">Save files</button>
+                <button class="btn-save" type="submit">Upload</button>
             </div>
         </form>
-
-        <form method="POST" action="/upload-multiple-images" enctype="multipart/form-data">
+            <hr>
+        <form method="POST" action="/upload-multiple-images" enctype="multipart/form-data" class="upload-file">
             <div>
-               <b> <label>Select multiple images:</label></b>
+               <b> <label>Upload multi images</label></b>
                 <input type="file" name="multiple_images" multiple />
             </div>
             <div>

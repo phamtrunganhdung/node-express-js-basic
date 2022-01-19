@@ -69,3 +69,6 @@ form {
   margin-top: 15px;
   cursor: pointer;
 }
+.upload-file {
+  display: block;
+}
